@@ -1,0 +1,10 @@
+c:\users\zav\documents\visual studio 2015\Projects\SSP_1\SSP_1\bin\Debug\SSP_1.exe.config
+c:\users\zav\documents\visual studio 2015\Projects\SSP_1\SSP_1\bin\Debug\SSP_1.exe
+c:\users\zav\documents\visual studio 2015\Projects\SSP_1\SSP_1\bin\Debug\SSP_1.pdb
+c:\users\zav\documents\visual studio 2015\Projects\SSP_1\SSP_1\obj\Debug\SSP_1.Form1.resources
+c:\users\zav\documents\visual studio 2015\Projects\SSP_1\SSP_1\obj\Debug\SSP_1.Properties.Resources.resources
+c:\users\zav\documents\visual studio 2015\Projects\SSP_1\SSP_1\obj\Debug\SSP_1.csproj.GenerateResource.Cache
+c:\users\zav\documents\visual studio 2015\Projects\SSP_1\SSP_1\obj\Debug\SSP_1.exe
+c:\users\zav\documents\visual studio 2015\Projects\SSP_1\SSP_1\obj\Debug\SSP_1.pdb
+c:\users\zav\documents\visual studio 2015\Projects\SSP_1\SSP_1\obj\Debug\SSP_1.csprojResolveAssemblyReference.cache
+c:\users\zav\documents\visual studio 2015\Projects\SSP_1\SSP_1\obj\Debug\SSP_1.form2.resources
