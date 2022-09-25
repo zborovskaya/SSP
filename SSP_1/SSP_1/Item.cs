@@ -6,15 +6,19 @@ using System.Threading.Tasks;
 
 namespace SSP_1
 {
-    class Item
+    public class Item
     {
-        private String englishWord;
-        private String russianWord;
+        public String englishWord ;
+        public String russianWord ;
 
         public Item(String englishWord, String russianWord)
         {
             this.englishWord = englishWord;
             this.russianWord = russianWord;
+        }
+
+        public Item()
+        {
         }
 
         public String getEnglishWord()
@@ -26,8 +30,6 @@ namespace SSP_1
         {
             return russianWord;
         }
-
-    
     }
 
 }

@@ -1,34 +1,50 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Xml.Serialization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
 
 namespace SSP_1
 {
-    class Dictionary
+    class Translator
     {
-        private List<Item> items = new List<Item>();
-        public Dictionary()
+        private List<Item> items;
+        private XmlSerializer xmlSerializer;
+        private string path = "translator.xml";
+        public Translator()
         {
-            items.Add(new Item("red", "красный"));
-            items.Add(new Item("cat", "кот"));
-            items.Add(new Item("rat", "крыса"));
-            items.Add(new Item("house", "дом"));
-            items.Add(new Item("home", "дом"));
-            items.Add(new Item("building", "дом"));
+            xmlSerializer = new XmlSerializer(typeof(List<Item>));
+            if (File.Exists(path)){
+                using (FileStream fs = new FileStream("translator.xml", FileMode.Open))
+                {
+                    items = xmlSerializer.Deserialize(fs) as List<Item>;
+                }
+            }else
+            {
+                items = new List<Item>();
+            }
+            
         }
-        // true russianToEnglish
-        // false englishToRussian
-        public List<String> getTranslation(String word, bool lang)
+
+        public void generateXml(List<Item> newItems)
         {
-            List<String> translations = new List<string>();
-            if (lang) {
+            using (FileStream fs = new FileStream("translator.xml", FileMode.OpenOrCreate))
+            {
+                xmlSerializer.Serialize(fs, newItems);
+            }
+        }
+
+        public List<Item> getTranslation(String word, int key)
+        {
+            List<Item> translations = new List<Item>();
+            if (key==0) {
                 foreach (Item item in items)
                 {
                     if (compare(word, item.getRussianWord()))
                     {
-                        translations.Add(item.getEnglishWord());
+                        translations.Add(item);
                     }
                 }
             }else
@@ -37,7 +53,7 @@ namespace SSP_1
                 {
                     if (compare(word, item.getEnglishWord()))
                     {
-                        translations.Add(item.getRussianWord());
+                        translations.Add(item);
                     }
                 }
             }

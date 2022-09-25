@@ -7,4 +7,3 @@ c:\users\zav\documents\visual studio 2015\Projects\SSP_1\SSP_1\obj\Debug\SSP_1.c
 c:\users\zav\documents\visual studio 2015\Projects\SSP_1\SSP_1\obj\Debug\SSP_1.exe
 c:\users\zav\documents\visual studio 2015\Projects\SSP_1\SSP_1\obj\Debug\SSP_1.pdb
 c:\users\zav\documents\visual studio 2015\Projects\SSP_1\SSP_1\obj\Debug\SSP_1.csprojResolveAssemblyReference.cache
-c:\users\zav\documents\visual studio 2015\Projects\SSP_1\SSP_1\obj\Debug\SSP_1.form2.resources
