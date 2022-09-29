@@ -106,9 +106,17 @@ namespace SSP_1
 
         private void button1_Click(object sender, EventArgs e)
         {
+            label4.Text = "";
             item.setRussianWord(textBox3.Text);
             item.setEnglishWord(textBox4.Text);
-            dictionary.addWord(item);
+            try
+            {
+                dictionary.addWord(item);
+            } catch (Exception exp)
+            {
+                label4.Text = exp.Message;
+            }
+            
             textBox3.Text = "";
             textBox4.Text = "";
         }

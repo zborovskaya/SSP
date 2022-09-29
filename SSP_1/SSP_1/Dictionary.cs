@@ -119,40 +119,34 @@ namespace SSP_1
 
         public void addWord(Item item)
         {
-            XmlDocument xDoc = new XmlDocument();
-            xDoc.Load("translator.xml");
-
-            XmlElement xmlItem = xDoc.CreateElement("Item");
-            XmlElement englishElem = xDoc.CreateElement("englishWord");
-            XmlElement russianElem = xDoc.CreateElement("russianWord");
-
-            XmlText englishText = xDoc.CreateTextNode(item.getEnglishWord());
-            XmlText russianText = xDoc.CreateTextNode(item.getRussianWord());
-         
-            englishElem.AppendChild(englishText);
-            russianElem.AppendChild(russianText);
-
-            xmlItem.AppendChild(englishElem);
-            xmlItem.AppendChild(russianElem);
-
-            if (xDoc != null)
+            try
             {
-                XmlElement xRoot = xDoc.DocumentElement;
-                if (xRoot != null)
-                {
-                    xRoot.AppendChild(xmlItem);
-                    xDoc.Save("translator.xml");
-                }
-                else
-                {
-                    //exception
-                }
-               
+               XmlDocument xDoc = new XmlDocument();
+               xDoc.Load("translator.xml");
+
+               XmlElement xmlItem = xDoc.CreateElement("Item");
+               XmlElement englishElem = xDoc.CreateElement("englishWord");
+               XmlElement russianElem = xDoc.CreateElement("russianWord");
+
+               XmlText englishText = xDoc.CreateTextNode(item.getEnglishWord());
+               XmlText russianText = xDoc.CreateTextNode(item.getRussianWord());
+
+               englishElem.AppendChild(englishText);
+               russianElem.AppendChild(russianText);
+
+               xmlItem.AppendChild(englishElem);
+               xmlItem.AppendChild(russianElem);
+
+               XmlElement xRoot = xDoc.DocumentElement;
+               xRoot.AppendChild(xmlItem);
+               xDoc.Save("translator.xml");
+                  
             }
-            else
+            catch
             {
-                //exception
+                throw new Exception("Server error");
             }
+            
         }
 
         public bool isBlocked()
@@ -166,6 +160,4 @@ namespace SSP_1
         }
 
     }
-
-
 }
