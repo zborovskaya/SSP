@@ -197,7 +197,19 @@
     <russianWord>страна</russianWord>
   </Item>
   <Item>
+    <englishWord>tome</englishWord>
+    <russianWord>том</russianWord>
+  </Item>
+  <Item>
     <englishWord>interesting</englishWord>
     <russianWord>интересный</russianWord>
+  </Item>
+  <Item>
+    <englishWord>hope</englishWord>
+    <russianWord>надежда</russianWord>
+  </Item>
+  <Item>
+    <englishWord>Plant</englishWord>
+    <russianWord>Растение</russianWord>
   </Item>
 </ArrayOfItem>

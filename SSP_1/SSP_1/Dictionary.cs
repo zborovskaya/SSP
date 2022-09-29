@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.IO;
+using System.Xml;
 
 namespace SSP_1
 {
@@ -13,27 +14,10 @@ namespace SSP_1
         private List<Item> items;
         private XmlSerializer xmlSerializer;
         private string path = "translator.xml";
+        private bool blocked = false;
         public Translator()
         {
-            xmlSerializer = new XmlSerializer(typeof(List<Item>));
-            if (File.Exists(path)){
-                using (FileStream fs = new FileStream("translator.xml", FileMode.Open))
-                {
-                    items = xmlSerializer.Deserialize(fs) as List<Item>;
-                }
-            }else
-            {
-                items = new List<Item>();
-            }
             
-        }
-
-        public void generateXml(List<Item> newItems)
-        {
-            using (FileStream fs = new FileStream("translator.xml", FileMode.OpenOrCreate))
-            {
-                xmlSerializer.Serialize(fs, newItems);
-            }
         }
 
         public List<Item> getTranslation(String word, int key)
@@ -107,6 +91,79 @@ namespace SSP_1
             }
             return true;
         } 
+
+        public void readXmlFile()
+        {
+            xmlSerializer = new XmlSerializer(typeof(List<Item>));
+            if (File.Exists(path))
+            {
+                blocked = false;
+                using (FileStream fs = new FileStream("translator.xml", FileMode.Open))
+                {
+                    try
+                    {
+                        items = xmlSerializer.Deserialize(fs) as List<Item>;
+                    }
+                    catch
+                    {
+                        items = null;
+                    }
+                  
+                }
+            }
+            else
+            {
+                blocked = true;
+            }
+        }
+
+        public void addWord(Item item)
+        {
+            XmlDocument xDoc = new XmlDocument();
+            xDoc.Load("translator.xml");
+
+            XmlElement xmlItem = xDoc.CreateElement("Item");
+            XmlElement englishElem = xDoc.CreateElement("englishWord");
+            XmlElement russianElem = xDoc.CreateElement("russianWord");
+
+            XmlText englishText = xDoc.CreateTextNode(item.getEnglishWord());
+            XmlText russianText = xDoc.CreateTextNode(item.getRussianWord());
+         
+            englishElem.AppendChild(englishText);
+            russianElem.AppendChild(russianText);
+
+            xmlItem.AppendChild(englishElem);
+            xmlItem.AppendChild(russianElem);
+
+            if (xDoc != null)
+            {
+                XmlElement xRoot = xDoc.DocumentElement;
+                if (xRoot != null)
+                {
+                    xRoot.AppendChild(xmlItem);
+                    xDoc.Save("translator.xml");
+                }
+                else
+                {
+                    //exception
+                }
+               
+            }
+            else
+            {
+                //exception
+            }
+        }
+
+        public bool isBlocked()
+        {
+            return blocked;
+        }
+
+        public List<Item> getItem()
+        {
+            return items;
+        }
 
     }
 

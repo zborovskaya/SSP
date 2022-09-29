@@ -30,6 +30,16 @@ namespace SSP_1
         {
             return russianWord;
         }
+
+        public void setEnglishWord(String englishWord)
+        {
+            this.englishWord =  englishWord;
+        }
+
+        public void setRussianWord(String russianWord)
+        {
+            this.russianWord = russianWord;
+        }
     }
 
 }
