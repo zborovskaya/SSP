@@ -27,3 +27,12 @@ C:\Users\admin\source\ссп\laba_1\SSP\SSP_1\SSP_1\obj\Debug\SSP_1.csproj.Gener
 C:\Users\admin\source\ссп\laba_1\SSP\SSP_1\SSP_1\obj\Debug\SSP_1.csproj.CoreCompileInputs.cache
 C:\Users\admin\source\ссп\laba_1\SSP\SSP_1\SSP_1\obj\Debug\SSP_1.exe
 C:\Users\admin\source\ссп\laba_1\SSP\SSP_1\SSP_1\obj\Debug\SSP_1.pdb
+f:\Bsuir\4\ССП\SspLab\SSP\SSP_1\SSP_1\bin\Debug\SSP_1.exe.config
+f:\Bsuir\4\ССП\SspLab\SSP\SSP_1\SSP_1\obj\Debug\SSP_1.exe
+f:\Bsuir\4\ССП\SspLab\SSP\SSP_1\SSP_1\obj\Debug\SSP_1.pdb
+f:\Bsuir\4\ССП\SspLab\SSP\SSP_1\SSP_1\bin\Debug\SSP_1.exe
+f:\Bsuir\4\ССП\SspLab\SSP\SSP_1\SSP_1\bin\Debug\SSP_1.pdb
+f:\Bsuir\4\ССП\SspLab\SSP\SSP_1\SSP_1\obj\Debug\SSP_1.csprojResolveAssemblyReference.cache
+f:\Bsuir\4\ССП\SspLab\SSP\SSP_1\SSP_1\obj\Debug\SSP_1.Form1.resources
+f:\Bsuir\4\ССП\SspLab\SSP\SSP_1\SSP_1\obj\Debug\SSP_1.Properties.Resources.resources
+f:\Bsuir\4\ССП\SspLab\SSP\SSP_1\SSP_1\obj\Debug\SSP_1.csproj.GenerateResource.Cache

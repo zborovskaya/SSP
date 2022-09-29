@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -107,11 +108,21 @@ namespace SSP_1
         private void button1_Click(object sender, EventArgs e)
         {
             label4.Text = "";
+            bool f1 = !Regex.IsMatch(textBox3.Text, "[A-Яa-я]+", RegexOptions.IgnoreCase);
+            bool f2 = !Regex.IsMatch(textBox4.Text, "[A-za-z]+", RegexOptions.IgnoreCase);
+            if (!Regex.IsMatch(textBox3.Text, "[А-Яа-я]+", RegexOptions.IgnoreCase)
+                || !Regex.IsMatch(textBox4.Text, "[A-za-z]+", RegexOptions.IgnoreCase)) {
+                label4.Text = "Input word is not correct";
+                return;
+            }
+            dictionary.readXmlFile();
             item.setRussianWord(textBox3.Text);
             item.setEnglishWord(textBox4.Text);
             try
             {
-                dictionary.addWord(item);
+                if (!dictionary.getItem().Contains(item))
+                { dictionary.addWord(item); }
+                
             } catch (Exception exp)
             {
                 label4.Text = exp.Message;

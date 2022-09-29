@@ -8,15 +8,25 @@ namespace SSP_1
 {
     public class Item
     {
-        public String englishWord ;
-        public String russianWord ;
+        public String englishWord;
+        public String russianWord;
 
         public Item(String englishWord, String russianWord)
         {
             this.englishWord = englishWord;
             this.russianWord = russianWord;
         }
+        public override bool Equals(object obj)
+        {
+            return Equals(obj as Item);
+        }
 
+        public bool Equals(Item other)
+        {
+            return other != null &&
+                   englishWord.Equals(other.englishWord) &&
+                   russianWord.Equals(other.russianWord);
+        }
         public Item()
         {
         }

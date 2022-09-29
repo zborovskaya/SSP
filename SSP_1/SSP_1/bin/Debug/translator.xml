@@ -212,4 +212,20 @@
     <englishWord>Plant</englishWord>
     <russianWord>Растение</russianWord>
   </Item>
+  <Item>
+    <englishWord>nuts</englishWord>
+    <russianWord>орехи</russianWord>
+  </Item>
+  <Item>
+    <englishWord>yes</englishWord>
+    <russianWord>да</russianWord>
+  </Item>
+  <Item>
+    <englishWord>add</englishWord>
+    <russianWord>добавить</russianWord>
+  </Item>
+  <Item>
+    <englishWord>jhk</englishWord>
+    <russianWord>hgjh</russianWord>
+  </Item>
 </ArrayOfItem>
