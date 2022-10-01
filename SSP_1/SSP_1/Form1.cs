@@ -22,6 +22,11 @@ namespace SSP_1
         private void Form1_Load(object sender, EventArgs e)
         {
             comboBox1.SelectedIndex = 0;
+            //comboBox2.Items.AddRange(new string[] { "translator", "school","university" });
+            //comboBox2.SelectedIndex = 0;
+            openFileDialog1.Filter = "Text files(*.xml)|*.xml|All files(*.*)|*.*";
+            label2.Text = "";
+            
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -35,7 +40,8 @@ namespace SSP_1
             if (comboBox1.SelectedIndex == 0)
             {
                 label1.Text = "Введите слово";
-            }else
+            }
+            else
             {
                 label1.Text = "Write word";
             }
@@ -53,29 +59,71 @@ namespace SSP_1
 
         private void button2_Click(object sender, EventArgs e)
         {
-            int selected = comboBox1.SelectedIndex;
-            translation = dictionary.getTranslation(textBox1.Text.Trim(), selected);
-            textBox2.Text = "";
-            if (translation.Count != 0)
+            try
             {
-                if (selected == 0)
+                
+                dictionary.readXmlFile();
+                if (dictionary.isBlocked())
                 {
-                    foreach (Item word in translation)
+                    textBox2.Text = "The file was not found!";
+                }
+                else
+                {
+                    int selected = comboBox1.SelectedIndex;
+                    translation = dictionary.getTranslation(textBox1.Text.Trim(), selected);
+                    textBox2.Text = "";
+                    if (translation.Count != 0)
                     {
-                        textBox2.Text = textBox2.Text + word.getRussianWord() +" - " + word.getEnglishWord() + Environment.NewLine;
+                        if (selected == 0)
+                        {
+                            foreach (Item word in translation)
+                            {
+                                textBox2.Text = textBox2.Text + word.getRussianWord() + " - " + word.getEnglishWord() + Environment.NewLine;
+                            }
+                        }
+                        else
+                        {
+                            foreach (Item word in translation)
+                            {
+                                textBox2.Text = textBox2.Text + word.getEnglishWord() + " - " + word.getRussianWord() + Environment.NewLine;
+                            }
+                        }
+
                     }
-                }else
-                {
-                    foreach (Item word in translation)
+                    else
                     {
-                        textBox2.Text = textBox2.Text + word.getEnglishWord() + " - " + word.getRussianWord() + Environment.NewLine;
+                        textBox2.Text = "We do not have this word!";
                     }
                 }
-                
-            }else
-            {
-                textBox2.Text = "We do not have this word!";
             }
+            catch
+            {
+                textBox2.Text = "Some problems with reading";
+            }
+        }
+
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            textBox1.Text = "";
+            textBox2.Text = "";
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (openFileDialog1.ShowDialog() == DialogResult.Cancel)
+                return;
+            // получаем выбранный файл
+            string filename = openFileDialog1.FileName;
+            dictionary.setPath(filename);
+            // читаем файл в строку
+            label2.Text = filename;
+            textBox1.Text = "";
+            textBox2.Text = "";
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<ArrayOfItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Item>
+    <englishWord>all</englishWord>
+    <russianWord>всё</russianWord>
+  </Item>
+  <Item>
+    <englishWord>every</englishWord>
+    <russianWord>каждый</russianWord>
+  </Item>
+</ArrayOfItem>

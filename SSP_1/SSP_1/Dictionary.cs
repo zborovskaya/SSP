@@ -13,28 +13,37 @@ namespace SSP_1
         private List<Item> items;
         private XmlSerializer xmlSerializer;
         private string path = "translator.xml";
+        private bool blocked = false;
+        private TranslatorDAO dao = new TranslatorDAO();
         public Translator()
         {
-            xmlSerializer = new XmlSerializer(typeof(List<Item>));
-            if (File.Exists(path)){
-                using (FileStream fs = new FileStream("translator.xml", FileMode.Open))
-                {
-                    items = xmlSerializer.Deserialize(fs) as List<Item>;
-                }
-            }else
-            {
-                items = new List<Item>();
-            }
-            
+        }
+        public void setPath(String pth)
+        {
+            path = pth;
         }
 
-        public void generateXml(List<Item> newItems)
+        public void readXmlFile()
         {
-            using (FileStream fs = new FileStream("translator.xml", FileMode.OpenOrCreate))
+           // path = name + ".xml";
+            xmlSerializer = new XmlSerializer(typeof(List<Item>));
+            if (File.Exists(path))
             {
-                xmlSerializer.Serialize(fs, newItems);
+                using (FileStream fs = new FileStream(path, FileMode.Open))
+                {
+                    items = xmlSerializer.Deserialize(fs) as List<Item>;
+                    blocked = false;
+                }
+            }
+            else
+            {
+                //items = new List<Item>();
+                blocked = true;
+                
             }
         }
+
+
 
         public List<Item> getTranslation(String word, int key)
         {
@@ -106,9 +115,13 @@ namespace SSP_1
                 }
             }
             return true;
-        } 
+        }
 
+        public bool isBlocked()
+        {
+            return blocked;
+        }
     }
 
-
+    
 }

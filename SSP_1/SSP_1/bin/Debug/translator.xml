@@ -200,4 +200,8 @@
     <englishWord>interesting</englishWord>
     <russianWord>интересный</russianWord>
   </Item>
+  <Item>
+    <englishWord>i</englishWord>
+    <russianWord>и</russianWord>
+  </Item>
 </ArrayOfItem>

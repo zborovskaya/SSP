@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<ArrayOfItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Item>
+    <englishWord>red</englishWord>
+    <russianWord>красный</russianWord>
+  </Item>
+  <Item>
+    <englishWord>cat</englishWord>
+    <russianWord>кот</russianWord>
+  </Item>
+  <Item>
+    <englishWord>rat</englishWord>
+    <russianWord>крыса</russianWord>
+  </Item>
+</ArrayOfItem>
