@@ -7,12 +7,4 @@ c:\users\zav\documents\visual studio 2015\Projects\SSP_1\SSP_1\obj\Debug\SSP_1.c
 c:\users\zav\documents\visual studio 2015\Projects\SSP_1\SSP_1\obj\Debug\SSP_1.exe
 c:\users\zav\documents\visual studio 2015\Projects\SSP_1\SSP_1\obj\Debug\SSP_1.pdb
 c:\users\zav\documents\visual studio 2015\Projects\SSP_1\SSP_1\obj\Debug\SSP_1.csprojResolveAssemblyReference.cache
-F:\Bsuir\4\ССП\SspLab\SSP\SSP_1\SSP_1\bin\Debug\SSP_1.exe.config
-F:\Bsuir\4\ССП\SspLab\SSP\SSP_1\SSP_1\obj\Debug\SSP_1.exe
-F:\Bsuir\4\ССП\SspLab\SSP\SSP_1\SSP_1\obj\Debug\SSP_1.pdb
-F:\Bsuir\4\ССП\SspLab\SSP\SSP_1\SSP_1\obj\Debug\SSP_1.csprojResolveAssemblyReference.cache
-F:\Bsuir\4\ССП\SspLab\SSP\SSP_1\SSP_1\obj\Debug\SSP_1.Form1.resources
-F:\Bsuir\4\ССП\SspLab\SSP\SSP_1\SSP_1\obj\Debug\SSP_1.Properties.Resources.resources
-F:\Bsuir\4\ССП\SspLab\SSP\SSP_1\SSP_1\obj\Debug\SSP_1.csproj.GenerateResource.Cache
-F:\Bsuir\4\ССП\SspLab\SSP\SSP_1\SSP_1\bin\Debug\SSP_1.exe
-F:\Bsuir\4\ССП\SspLab\SSP\SSP_1\SSP_1\bin\Debug\SSP_1.pdb
+C:\Users\zav\Documents\Visual Studio 2015\Projects\SSP_1\SSP_1\obj\Debug\SSP_1.Form2.resources

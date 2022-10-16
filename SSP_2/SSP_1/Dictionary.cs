@@ -14,6 +14,7 @@ namespace SSP_1
         private XmlSerializer xmlSerializer;
         private string path = "translator.xml";
         private bool blocked = false;
+        private TranslatorDAO dao = new TranslatorDAO();
         public Translator()
         {
         }
@@ -41,7 +42,10 @@ namespace SSP_1
                 
             }
         }
-
+        public void readItems()
+        {
+            items = dao.getItemsList();
+        }
 
 
         public List<Item> getTranslation(String word, int key)
@@ -120,7 +124,16 @@ namespace SSP_1
         {
             return blocked;
         }
-    }
+        public void addWord(Item item)
+        {
+            dao.add(item.getEnglishWord(), item.getRussianWord());
 
+        }
+        public List<Item> getItem()
+        {
+            return items;
+        }
+
+    }
     
 }
