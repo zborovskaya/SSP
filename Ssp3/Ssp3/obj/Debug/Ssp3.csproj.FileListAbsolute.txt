@@ -1,0 +1,9 @@
+c:\users\zav\documents\visual studio 2015\Projects\Ssp3\Ssp3\bin\Debug\Ssp3.exe.config
+c:\users\zav\documents\visual studio 2015\Projects\Ssp3\Ssp3\bin\Debug\Ssp3.exe
+c:\users\zav\documents\visual studio 2015\Projects\Ssp3\Ssp3\bin\Debug\Ssp3.pdb
+c:\users\zav\documents\visual studio 2015\Projects\Ssp3\Ssp3\obj\Debug\Ssp3.csprojResolveAssemblyReference.cache
+c:\users\zav\documents\visual studio 2015\Projects\Ssp3\Ssp3\obj\Debug\Ssp3.Form1.resources
+c:\users\zav\documents\visual studio 2015\Projects\Ssp3\Ssp3\obj\Debug\Ssp3.Properties.Resources.resources
+c:\users\zav\documents\visual studio 2015\Projects\Ssp3\Ssp3\obj\Debug\Ssp3.csproj.GenerateResource.Cache
+c:\users\zav\documents\visual studio 2015\Projects\Ssp3\Ssp3\obj\Debug\Ssp3.exe
+c:\users\zav\documents\visual studio 2015\Projects\Ssp3\Ssp3\obj\Debug\Ssp3.pdb
